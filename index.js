@@ -9,9 +9,9 @@ document.getElementById("daily-scripture").textContent =
 
 // Event Calendar with Details
 const events = [
-    { day: "Every Sunday", title: "Sunday Worship", location: "Main Auditorium", time: "08:00 AM" },
-    { day: "Every Tuesday", title: "Bible Study", location: "Main Auditorium", time: "5:30 PM" },
-    { day: "Every Thursday", title: "Revival Hour/Miracle Hour", location: "Main Auditorium", time: "5:30 PM" }
+    { date: "Every Sunday", title: "Sunday Worship", location: "Main Auditorium", time: "08:00 AM" },
+    { date: "Every Tuesday", title: "Bible Study", location: "Main Auditorium", time: "5:30 PM" },
+    { date: "Every Thursday", title: "Revival Hour/Miracle Hour", location: "Main Auditorium", time: "5:30 PM" }
 ];
 const eventList = document.getElementById("event-list");
 events.forEach(event => {

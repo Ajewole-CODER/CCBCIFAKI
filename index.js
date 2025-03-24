@@ -40,7 +40,7 @@ document.getElementById("scriptures").textContent =
 
 // Event Calendar with Details
 const events = [
-    { date: "22-23 March 2025", title: "10 year @ permanent site & 12 years at Ifaki & Aaye region Anniversary Celebration", location: "Onsite @ CCBC IFAKI Main Auditorium https://maps.app.goo.gl/8XXREXed8pGtAYEc9 and online on our Youtube Channel @ https://youtube.com/@ccbcifaki", time: "3pm"},
+    //{ date: "22-23 March 2025", title: "10 year @ permanent site & 12 years at Ifaki & Aaye region Anniversary Celebration", location: "Onsite @ CCBC IFAKI Main Auditorium https://maps.app.goo.gl/8XXREXed8pGtAYEc9 and online on our Youtube Channel @ https://youtube.com/@ccbcifaki", time: "3pm"},//
     
     { date: "Every Sunday", title: "Sunday Worship Service", location: "Main Auditorium", time: "08:00 AM" },
     { date: "Every Tuesday", title: "Tuesday Bible Study", location: "Main Auditorium", time: "5:30 PM" },

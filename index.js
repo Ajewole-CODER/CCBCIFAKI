@@ -40,7 +40,7 @@ document.getElementById("scriptures").textContent =
 
 // Event Calendar with Details
 const events = [
-    { date: "17-19 April 2025", title: "EASTER RETREAT 2025", location: "Onsite @ CCBC IFAKI Main Auditorium https://maps.app.goo.gl/8XXREXed8pGtAYEc9 and online on our Youtube Channel https://youtube.com/@ccbcifaki ", time: "ONGOING"},
+    //{ date: "17-19 April 2025", title: "EASTER RETREAT 2025", location: "Onsite @ CCBC IFAKI Main Auditorium https://maps.app.goo.gl/8XXREXed8pGtAYEc9 and online on our Youtube Channel https://youtube.com/@ccbcifaki ", time: "ONGOING"}//,
     
     { date: "Every Sunday", title: "Sunday Worship Service", location: "Main Auditorium", time: "08:00 AM" },
     { date: "Every Tuesday", title: "Tuesday Bible Study", location: "Main Auditorium", time: "5:30 PM" },

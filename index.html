@@ -1,124 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christ Companion Bible Church Ifaki Ekiti</title>
-    <link rel="stylesheet" href="index.css">
-
-    <link rel="icon" type="image/png" href="images/3dgifmaker11862.gif">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christ Companion Bible Church Ifaki Ekiti</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/png" href="images/3dgifmaker11862.gif" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to Christ Companion Bible Church Ifaki <br> <p>.....Winning and Reigning With Christ. </p><br><img src="images/3dgifmaker11862.gif" alt=""></h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#events">Upcoming Events</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#prayer">Prayer Request</a></li>
-                <li><a href="#location">Location</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="branding">
+      <img src="images/3dgifmaker11862.gif" alt="Church Logo" />
+      <h1>Christ Companion Bible Church Ifaki</h1>
+      <p class="tagline">...Winning and Reigning With Christ</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#events">Upcoming Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#prayer">Prayer Request</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Scriptures  -->
-        <section id="scripture">
-            <h2>Scriptures</h2>
-            <p id="scriptures"></p>
-        </section>
-        <!-- About Us Section -->
-        <section id="about">
-            <h2>About Us</h2>
-                <p>Our church is a place of worship, community, and spiritual growth. We welcome everyone!</p>
-            </section>
+  <!-- Main Content -->
+  <main>
+    <!-- 1. Live Streaming Integration -->
+    <section id="livestream">
+      <h2>Join Our Live Service</h2>
+      <div class="video-container" style="text-align:center;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID" 
+          title="YouTube live stream" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
-            <section id="mission">
-                <h2>Our Mission</h2>
-                <p>.....Winning and Reigning With Christ. </p>
-            </section>
+    <!-- 2. Sermon Archive -->
+    <section id="sermons">
+      <h2>Sermon Archive</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=SERMON1" target="_blank">Sunday Service - June 15, 2025</a></li>
+        <li><a href="https://www.youtube.com/watch?v=SERMON2" target="_blank">Bible Study - June 12, 2025</a></li>
+      </ul>
+    </section>
 
-            <!-- Services Section -->
-            <section id="services">
-                <h2>Our Services</h2>
-                <p>We offer Sunday worship, Bible studies, and various community programs.</p>
-            </section>
+    <!-- 3. Newsletter Signup -->
+    <section id="newsletter">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form id="newsletter-form">
+        <input type="email" name="newsletter-email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletter-response"></div>
+    </section>
 
-            <!-- Upcoming Events Section -->
-            <section id="events">
-                <h2>Upcoming Events</h2>
-                <ul id="event-list"></ul>
-            </section>
+    <!-- 4. Event Registration -->
+    <section id="event-registration">
+      <h2>Register for Upcoming Events</h2>
+      <form id="event-registration-form">
+        <input type="text" name="event-name" placeholder="Your Name" required />
+        <input type="email" name="event-email" placeholder="Your Email" required />
+        <select name="event-choice" required>
+          <option value="">Select Event</option>
+          <option value="youth-camp">Youth Camp</option>
+          <option value="bible-study">Bible Study</option>
+        </select>
+        <button type="submit">Register</button>
+      </form>
+      <div id="event-registration-response"></div>
+    </section>
 
-        <!-- Photo Gallery Section -->
-        <!--<section id="gallery">
-            <h2>Photo Gallery</h2>
-            <div class="gallery-container">
-                <img src="image1.png" alt="Event 1">
-                <img src="image2.jpg" alt="Event 2">
-                <img src="image3.jpg" alt="Event 3">
-            </div>
-        </section> -->
-     
-        <!-- Prayer Request Section -->
-        <section id="prayer">
-            <h2>Prayer Request</h2>
-            <form id="prayer-form">
-                <label for="prayer-name">Name:</label>
-                <input type="text" id="prayer-name" name="prayer-name" required>
+    <!-- 5. Testimonials -->
+    <section id="testimonials">
+      <h2>What Our Members Say</h2>
+      <blockquote>
+        "This church has changed my life for the better!"<br>
+        <cite>- Jane Doe</cite>
+      </blockquote>
+      <blockquote>
+        "A true family in Christ."<br>
+        <cite>- John Smith</cite>
+      </blockquote>
+    </section>
 
-                <label for="prayer-message">Your Prayer:</label>
-                <textarea id="prayer-message" name="prayer-message" rows="4" required></textarea>
+    <!-- 6. Volunteer Signup -->
+    <section id="volunteer">
+      <h2>Volunteer With Us</h2>
+      <form id="volunteer-form">
+        <input type="text" name="volunteer-name" placeholder="Your Name" required />
+        <input type="email" name="volunteer-email" placeholder="Your Email" required />
+        <textarea name="volunteer-interest" placeholder="How would you like to help?" required></textarea>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div id="volunteer-response"></div>
+    </section>
 
-                <button type="submit">Submit</button>
-            </form>
-            <div id="prayer-response"></div>
-        </section>
+    <!-- 7. Blog or News Section -->
+    <section id="blog">
+      <h2>Church News & Devotionals</h2>
+      <article>
+        <h3>Faith in Action</h3>
+        <p>Read our latest devotional on living out your faith every day.</p>
+        <a href="#">Read more</a>
+      </article>
+    </section>
 
-        <!-- Location Section -->
-        <section id="location">
-            <h2>Our Location</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.827130357242!2d5.232091908928412!3d7.795539392192129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10480900149ea5cb%3A0x25fe7083568463c8!2sChrist%20Companion%20Bible%20Church%20(CCBC)%20Ifaki!5e1!3m2!1sen!2sus!4v1742416526063!5m2!1sen!2sus" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+    <!-- 8. Photo Gallery (Activated) -->
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery-container">
+        <img src="images/image1.png" alt="Event 1" />
+        <img src="images/image2.jpg" alt="Event 2" />
+        <img src="images/image3.jpg" alt="Event 3" />
+      </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+    <!-- Scripture of the Day -->
+    <section id="scripture">
+      <h2>Scripture of the Day</h2>
+      <p id="scriptures">Loading verse...</p>
+    </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+    <!-- About Us -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Our church is a place of worship, community, and spiritual growth. We welcome everyone!</p>
+    </section>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+    <!-- Mission -->
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p>...Winning and Reigning With Christ.</p>
+    </section>
 
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+    <!-- Services -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>We offer Sunday worship, Bible studies, and various community programs for spiritual growth and fellowship.</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Christ Companion Bible Church Ifaki. All rights reserved.</p>
-        <div id="social-media">
-            <a href="https://www.facebook.com/Christ Companion Bible Church Ifaki" target="_blank">
-                <img src="images/facebook icon.png" alt="Facebook">
-            </a>
-            <a href="https://wa.me/+234(0)8067108806" target="_blank">
-                <img src="images/whatsapp icon (2).png" alt="WhatsApp">
-            </a>
-            <a href="https://www.youtube.com/@ccbcifaki" target="_blank">
-                <img src="images/youtube-145-16.png" alt="YouTube">
-            </a>
-            <a href="tel:08067108806">
-                <img src="images/phone-115-16.png" alt="Phone">
-            </a>
-        </div>
-    </footer>
-    <script src="index.js" defer></script>
+    <!-- Events -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <ul id="event-list"></ul>
+    </section>
+
+    <!-- Prayer Request -->
+    <section id="prayer">
+      <h2>Prayer Request</h2>
+      <form id="prayer-form">
+        <label for="prayer-name">Name:</label>
+        <input type="text" id="prayer-name" name="prayer-name" required />
+
+        <label for="prayer-message">Your Prayer:</label>
+        <textarea id="prayer-message" name="prayer-message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="prayer-response"></div>
+    </section>
+
+    <!-- Location -->
+    <section id="location">
+      <h2>Our Location</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.827130357242!2d5.232091908928412!3d7.795539392192129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10480900149ea5cb%3A0x25fe7083568463c8!2sChrist%20Companion%20Bible%20Church%20(CCBC)%20Ifaki!5e1!3m2!1sen!2sus!4v1742416526063!5m2!1sen!2sus"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- 11. Online Giving/Donations -->
+    <section id="giving">
+      <h2>Online Giving</h2>
+      <p>Support our ministry by giving online.</p>
+      <a href="https://paystack.com/pay/yourchurch" target="_blank" class="donate-btn">Donate Now</a>
+    </section>
+
+    <!-- 12. Multi-language Support (Language Switcher) -->
+    <section id="language">
+      <h2>Choose Language</h2>
+      <select id="language-switcher">
+        <option value="en">English</option>
+        <option value="yo">Yoruba</option>
+      </select>
+    </section>
+
+    <!-- 13. Accessibility Improvements (Toggle) -->
+    <button id="toggle-contrast" style="margin: 1em 0;">Toggle High Contrast</button>
+
+    <!-- 14. Interactive Map/Directions -->
+    <section id="directions">
+      <h2>Get Directions</h2>
+      <form id="directions-form">
+        <input type="text" id="user-location" placeholder="Enter your location" required />
+        <button type="submit">Show Directions</button>
+      </form>
+      <div id="directions-result"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Christ Companion Bible Church Ifaki. All rights reserved.</p>
+    <div id="social-media">
+      <a href="https://www.facebook.com/Christ Companion Bible Church Ifaki" target="_blank">
+        <img src="images/facebook icon.png" alt="Facebook" />
+      </a>
+      <a href="https://wa.me/2348067108806" target="_blank">
+        <img src="images/whatsapp icon (2).png" alt="WhatsApp" />
+      </a>
+      <a href="https://www.youtube.com/@ccbcifaki" target="_blank">
+        <img src="images/youtube-145-16.png" alt="YouTube" />
+      </a>
+      <a href="tel:+2348067108806">
+        <img src="images/phone-115-16.png" alt="Phone" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="index.js" defer></script>
+  
 </body>
 </html>

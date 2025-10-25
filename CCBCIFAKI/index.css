@@ -112,6 +112,11 @@ nav ul li a:hover {
     background-color: #ffed4e;
 }
 
+.btn-short {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
 
 /* Main Sections */
 main {
@@ -427,6 +432,45 @@ footer {
 #event-list li em {
     font-size: 1rem;
     color: #555;
+}
+
+/* Countdown Timer Styling */
+.countdown-overlay {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.countdown-number {
+    font-size: 24px;
+    line-height: 1;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.countdown-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    opacity: 0.8;
 }
 
 /* Responsive Design */

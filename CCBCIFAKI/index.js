@@ -269,6 +269,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+let countdownInterval;
+
 function updateCountdown() {
     const eventDate = new Date('2025-11-08T00:00:00').getTime();
     const now = new Date().getTime();
@@ -279,6 +281,7 @@ function updateCountdown() {
         document.getElementById('hours').textContent = '00';
         document.getElementById('minutes').textContent = '00';
         document.getElementById('seconds').textContent = '00';
+        clearInterval(countdownInterval);
         return;
     }
 
@@ -293,5 +296,5 @@ function updateCountdown() {
     document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 }
 
-setInterval(updateCountdown, 1000);
+countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();

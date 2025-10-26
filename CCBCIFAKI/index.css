@@ -230,6 +230,7 @@ section h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .event-title {

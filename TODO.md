@@ -1,22 +1,8 @@
-# TODO List for Updating Upcoming Events Section and Adding Mega Evangelism Rally Event
+# TODO: Implement Image Slider Background for Hero Section
 
-## 1. Update Services Section (Upcoming Events)
-- [x] Modify HTML to have 3 service cards: Sunday, Tuesday, Thursday
-- [x] Replace placeholder backgrounds with actual images (ccbc ifaki.jpg for Sunday, 20250930_194026.jpg for Tuesday, 20251025_103411.jpg for Thursday)
-- [x] Update tags, titles, and descriptions for each day
-- [ ] Adjust CSS if needed for image display
-
-## 2. Update Event Section for Mega Evangelism Rally
-- [x] Change event poster from SVG to image (channels4_banner.jpg)
-- [x] Update event title to "Mega Evangelism Rally"
-- [x] Update event date to "8th & 9th of November 2025"
-- [x] Add overlay for countdown timer on the image
-- [x] Update CSS for overlay positioning and styling
-
-## 3. Update JavaScript
-- [x] Change countdown date to November 8, 2025, 00:00:00 (assuming start time)
-- [x] Ensure countdown updates correctly
-
-## 4. Testing and Verification
-- [x] Test the page in browser to ensure images load and countdown works
-- [ ] Verify responsive design
+## Steps to Complete:
+- [x] Modify index.html: Add a slider container inside the hero section with selected images (ccbc logo.jpg, ccbc ifaki.jpg, 20250930_194026.jpg, 20251025_103411.jpg, channels4_banner.jpg).
+- [x] Update index.css: Remove the gradient background from .hero, style the slider for full coverage, add sliding animation, and include a dark overlay for text readability.
+- [x] Update index.js: Add JavaScript to cycle through slider images every 3 seconds with smooth transitions.
+- [x] Test the implementation to ensure slider works and text remains readable.
+- [x] Enhance text color: Make text color adapt to background image brightness for better readability.

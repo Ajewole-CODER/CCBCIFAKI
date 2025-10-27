@@ -298,3 +298,76 @@ function updateCountdown() {
 
 countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// Hero Image Slider
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.slide');
+    const heroContent = document.querySelector('.hero-content');
+    let currentSlide = 0;
+
+    function getImageBrightness(img) {
+        // Create a canvas to analyze the image
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+
+        // Draw the image on the canvas
+        ctx.drawImage(img, 0, 0);
+
+        // Get image data
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
+
+        let brightness = 0;
+        let pixelCount = 0;
+
+        // Sample pixels (every 10th pixel for performance)
+        for (let i = 0; i < data.length; i += 40) { // 4 bytes per pixel (RGBA), skip every 10 pixels
+            const r = data[i];
+            const g = data[i + 1];
+            const b = data[i + 2];
+
+            // Calculate brightness using luminance formula
+            brightness += (0.299 * r + 0.587 * g + 0.114 * b);
+            pixelCount++;
+        }
+
+        return brightness / pixelCount; // Average brightness
+    }
+
+    function adjustTextColor(brightness) {
+        if (brightness > 128) { // Light image
+            heroContent.style.color = '#333'; // Dark text
+        } else { // Dark image
+            heroContent.style.color = '#fff'; // Light text
+        }
+    }
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+
+        // Adjust text color based on current slide
+        const activeSlide = slides[index];
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = function() {
+            const brightness = getImageBrightness(img);
+            adjustTextColor(brightness);
+        };
+        img.src = activeSlide.style.backgroundImage.slice(5, -2); // Extract URL from background-image
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Start the slider
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+    // Initialize first slide
+    showSlide(0);
+});

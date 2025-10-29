@@ -110,7 +110,7 @@ const events = [
     { date: "Every Sunday", title: "Sunday Worship Service", location: "Main Auditorium", time: "08:00 AM", description: "Join us for praise, worship, and the Word." },
     { date: "Every Tuesday", title: "Tuesday Bible Study", location: "Main Auditorium", time: "5:30 PM", description: "Deep dive into God's Word with fellowship." },
     { date: "Every Thursday", title: "Thursday Revival Hour/Miracle Hour", location: "Main Auditorium", time: "5:30 PM", description: "Experience God's power and miracles." },
-    { date: "Every 2nd, 3rd & 4th Friday of the Month" , title: "Night Vigil", location: "Main Auditorium", time: "11:00 PM", description: "Prayers to conquer our battles." },
+    { date: "Every 2nd, 3rd & 4th Friday of the Month" , title: "Vigil", location: "Main Auditorium", time: "11:00 PM", description: "Prayers to conquer our battles." },
     { date: "26/12/2025", title: "Youth Fiesta", location: "Main Auditorium", time: "10:00 AM", description: "Serving the community and spreading God's love." }
 ];
 

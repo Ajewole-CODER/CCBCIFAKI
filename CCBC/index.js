@@ -19,7 +19,7 @@ const verses = [
   "Come to me, all you who are weary and burdened, and I will give you rest. - Matthew 11:28",
   "The fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. - Galatians 5:22-23",
   "Cast all your anxiety on him because he cares for you. - 1 Peter 5:7",
-  "But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint. - Isaiah 40:31"
+  "But those who hope in the Lord will renew their strength. They will soar on wings like eagles, they will run and not grow weary, they will walk and not be faint. - Isaiah 40:31"
 ];
 
 function displayRandomVerse() {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Populate events
   populateEvents();
 
-  // Contact form: progressive enhancement to POST to /api/contact
+  // Contact form: progressive enhancement to POST to /api/contact as JSON
   const contactForm = document.getElementById('contact-form');
   const contactResp = document.getElementById('contact-response');
   if (contactForm && contactResp) {
@@ -102,10 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
       contactResp.textContent = 'Sending...';
 
       const formData = new FormData(contactForm);
+      const payload = {
+        name: formData.get('name') || '',
+        email: formData.get('email') || '',
+        message: formData.get('message') || ''
+      };
+
       try {
         const res = await fetch(contactForm.action || '/api/contact', {
           method: 'POST',
-          body: formData
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
         });
         const json = await res.json().catch(() => null);
         if (res.ok) {
@@ -171,8 +178,8 @@ function escapeHtml(s) {
 // Events data & renderer
 const events = [
   { date: 'Every Sunday', title: 'Sunday Worship Service', location: 'Main Auditorium', time: '08:00 AM', description: 'Join us for praise, worship, and the Word.' },
-  { date: 'Every Tuesday', title: 'Tuesday Bible Study', location: 'Main Auditorium', time: '5:30 PM', description: 'Deep dive into God\'s Word with fellowship.' },
-  { date: 'Every Thursday', title: 'Thursday Revival Hour/Miracle Hour', location: 'Main Auditorium', time: '5:30 PM', description: 'Experience God\'s power and miracles.' },
+  { date: 'Every Tuesday', title: 'Tuesday Bible Study', location: 'Main Auditorium', time: '5:30 PM', description: "Deep dive into God's Word with fellowship." },
+  { date: 'Every Thursday', title: 'Thursday Revival Hour/Miracle Hour', location: 'Main Auditorium', time: '5:30 PM', description: "Experience God's power and miracles." },
   { date: 'Every 2nd, 3rd & 4th Friday of the Month', title: 'Vigil', location: 'Main Auditorium', time: '11:00 PM', description: 'Prayers to conquer our battles.' },
   { date: '26/12/2025', title: 'Youth Fiesta', location: 'Main Auditorium', time: '10:00 AM', description: 'Serving the community and spreading God\'s love.' }
 ];
